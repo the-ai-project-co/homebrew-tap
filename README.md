@@ -1,10 +1,32 @@
-# Homebrew Tap for Nimbus
+# Homebrew Tap — The AI Project Co
+
+AI-powered DevOps tools from The AI Project Co.
+
+## Tools
+
+### Astron — DevOps Automation Platform
+
+AI-powered platform that generates production-ready DevOps configurations and orchestrates workflows.
+
+**Current version: v1.0.0**
+
+```bash
+brew tap the-ai-project-co/tap
+brew install astron
+```
+
+After installation:
+
+```bash
+astron --help
+astron init    # scaffold your first bot config
+```
+
+### Nimbus — DevOps Terminal Agent
 
 AI-powered DevOps terminal agent — Terraform, Kubernetes, Helm, and cloud infrastructure management from your terminal.
 
 **Current version: v0.4.2**
-
-## Installation
 
 ```bash
 brew tap the-ai-project-co/tap
@@ -50,6 +72,7 @@ brew uninstall nimbus
 
 ## Available Formulas
 
+- **astron** - AI-powered DevOps automation platform (CI/CD, Docker, Kubernetes, Terraform, deployments)
 - **nimbus** - AI-powered DevOps terminal agent (Terraform, Kubernetes, Helm, AWS, GCP, Azure)
 
 ## License
