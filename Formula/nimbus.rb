@@ -1,54 +1,33 @@
 class Nimbus < Formula
-  desc "AI-powered cloud infrastructure management CLI"
+  desc "AI-powered DevOps CLI -- Terraform, Kubernetes, Helm in your terminal"
   homepage "https://github.com/the-ai-project-co/nimbus"
-  version "0.2.0"
+  url "https://registry.npmjs.org/@build-astron-co/nimbus/-/nimbus-0.4.1.tgz"
+  # Get SHA256 with: curl -sL https://registry.npmjs.org/@build-astron-co/nimbus/-/nimbus-0.4.1.tgz | shasum -a 256
+  sha256 "PLACEHOLDER_SHA256_FILL_WHEN_PUBLISHED"
+  version "0.4.1"
   license "MIT"
 
-  on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/the-ai-project-co/nimbus/releases/download/v0.2.0/nimbus-darwin-arm64.tar.gz"
-      sha256 "PLACEHOLDER_DARWIN_ARM64_BUILD_REQUIRED"
-    else
-      url "https://github.com/the-ai-project-co/nimbus/releases/download/v0.2.0/nimbus-darwin-x64.tar.gz"
-      sha256 "PLACEHOLDER_DARWIN_X64_BUILD_REQUIRED"
-    end
-  end
-
-  on_linux do
-    if Hardware::CPU.arm?
-      url "https://github.com/the-ai-project-co/nimbus/releases/download/v0.2.0/nimbus-linux-arm64.tar.gz"
-      sha256 "PLACEHOLDER_LINUX_ARM64_BUILD_REQUIRED"
-    else
-      url "https://github.com/the-ai-project-co/nimbus/releases/download/v0.2.0/nimbus-linux-x64.tar.gz"
-      sha256 "PLACEHOLDER_LINUX_X64_BUILD_REQUIRED"
-    end
-  end
+  depends_on "node"
 
   def install
-    bin.install "nimbus"
+    system "npm", "install", "--production", "--ignore-scripts"
+    (libexec/"lib").install Dir["*"]
+    (bin/"nimbus").write_env_script libexec/"lib/bin/nimbus.mjs", {}
   end
 
   def caveats
     <<~EOS
-      To get started with Nimbus:
+      Run `nimbus` -- the first-run wizard guides you through API key setup.
 
-        # Just run nimbus — first-run wizard will guide you
-        nimbus
-
-        # Or set an API key directly
-        export ANTHROPIC_API_KEY=sk-ant-...
-
-      Optional cloud CLI tools for full functionality:
-        - Terraform:     brew install hashicorp/tap/terraform
-        - kubectl:       brew install kubernetes-cli
-        - Helm:          brew install helm
-        - AWS CLI:       brew install awscli
-
-      Documentation: https://github.com/the-ai-project-co/nimbus#readme
+      For full DevOps functionality, install optional CLI tools:
+        brew install hashicorp/tap/terraform
+        brew install kubernetes-cli
+        brew install helm
+        brew install awscli
     EOS
   end
 
   test do
-    assert_match "nimbus", shell_output("#{bin}/nimbus --version")
+    assert_match "nimbus", shell_output("#{bin}/nimbus --version 2>&1")
   end
 end
