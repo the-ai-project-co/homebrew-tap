@@ -1,10 +1,10 @@
 class Nimbus < Formula
   desc "AI-powered DevOps CLI -- Terraform, Kubernetes, Helm in your terminal"
   homepage "https://github.com/the-ai-project-co/nimbus"
-  url "https://registry.npmjs.org/@build-astron-co/nimbus/-/nimbus-0.4.1.tgz"
-  # Get SHA256 with: curl -sL https://registry.npmjs.org/@build-astron-co/nimbus/-/nimbus-0.4.1.tgz | shasum -a 256
-  sha256 "PLACEHOLDER_SHA256_FILL_WHEN_PUBLISHED"
-  version "0.4.1"
+  url "https://registry.npmjs.org/@build-astron-co/nimbus/-/nimbus-0.4.2.tgz"
+  # Get SHA256 with: curl -sL https://registry.npmjs.org/@build-astron-co/nimbus/-/nimbus-0.4.2.tgz | shasum -a 256
+  sha256 "c8d3eae160a892e32837db3dcae515e843e5383fef52b8141940c8bcf8b6d59f"
+  version "0.4.2"
   license "MIT"
 
   depends_on "node"
