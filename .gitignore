@@ -1,0 +1,4 @@
+# OpenMemory - IDE/Assistant specific rules
+.cursor
+.claude/
+CLAUDE.md
