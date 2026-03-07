@@ -1,29 +1,29 @@
 class Nimbus < Formula
   desc "AI-powered DevOps CLI -- Terraform, Kubernetes, Helm in your terminal"
   homepage "https://github.com/the-ai-project-co/nimbus"
-  version "0.4.1"
+  version "0.4.2"
   license "MIT"
 
   # Pre-compiled standalone binaries — no Node.js or tsx required.
   on_macos do
     on_arm do
-      url "https://github.com/the-ai-project-co/nimbus/releases/download/v0.4.1/nimbus-darwin-arm64.tar.gz"
-      sha256 "f7dc1cb67497b831ff61d8441201d6962f5fbf7c58bb9dc416a284fba6075a7e"
+      url "https://github.com/the-ai-project-co/nimbus/releases/download/v0.4.2/nimbus-darwin-arm64.tar.gz"
+      sha256 "7b7798ae7240df7c0dcd5c7b6f642f97fc02bf1d67e1060d22addc89e1dd3766"
     end
     on_intel do
-      url "https://github.com/the-ai-project-co/nimbus/releases/download/v0.4.1/nimbus-darwin-x64.tar.gz"
-      sha256 "12185f773fe79a0b095aee14507de393c6276bd4d11dbdd858becd6f0489136f"
+      url "https://github.com/the-ai-project-co/nimbus/releases/download/v0.4.2/nimbus-darwin-x64.tar.gz"
+      sha256 "1512a99e8f29482fefe6aaf504f904db07b11625839a10b453d77e95de5de2b6"
     end
   end
 
   on_linux do
     on_arm do
-      url "https://github.com/the-ai-project-co/nimbus/releases/download/v0.4.1/nimbus-linux-arm64.tar.gz"
-      sha256 "a819025a27a864a034b36e47056b6d3862bbb50aa6d20ee2aecbb040456a1ce7"
+      url "https://github.com/the-ai-project-co/nimbus/releases/download/v0.4.2/nimbus-linux-arm64.tar.gz"
+      sha256 "661e69268db872c6ddee3b37c8a9851fa6077a46b3bb0f2d427b2dce50adc307"
     end
     on_intel do
-      url "https://github.com/the-ai-project-co/nimbus/releases/download/v0.4.1/nimbus-linux-x64.tar.gz"
-      sha256 "4fec30b5c98ebefdc26a1a0e2fc8854669cfdb311e71a2422cfc561be9e599e5"
+      url "https://github.com/the-ai-project-co/nimbus/releases/download/v0.4.2/nimbus-linux-x64.tar.gz"
+      sha256 "491ea4380935f4dc704924f9cf7ebfafbd20330fca4d5414b802ce5041b28274"
     end
   end
 
