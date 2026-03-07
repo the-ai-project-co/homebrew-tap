@@ -26,11 +26,21 @@ astron init    # scaffold your first bot config
 
 AI-powered DevOps terminal agent — Terraform, Kubernetes, Helm, and cloud infrastructure management from your terminal.
 
-**Current version: v0.4.2**
+**Current version: v0.4.1**
+
+> **Note:** Homebrew core has an unrelated deprecated cask also named "nimbus" (an old IRC client).
+> Always use the fully-qualified tap name to install the correct package.
 
 ```bash
 brew tap the-ai-project-co/tap
-brew install nimbus
+brew install the-ai-project-co/tap/nimbus
+```
+
+If you accidentally installed the wrong "nimbus", uninstall it first:
+
+```bash
+brew uninstall --cask nimbus
+brew install the-ai-project-co/tap/nimbus
 ```
 
 ## Getting Started
@@ -61,13 +71,13 @@ brew install awscli
 ## Upgrade
 
 ```bash
-brew upgrade nimbus
+brew upgrade the-ai-project-co/tap/nimbus
 ```
 
 ## Uninstall
 
 ```bash
-brew uninstall nimbus
+brew uninstall the-ai-project-co/tap/nimbus
 ```
 
 ## Available Formulas
