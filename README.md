@@ -6,9 +6,9 @@ AI-powered DevOps tools from The AI Project Co.
 
 ### Astron — DevOps Automation Platform
 
-AI-powered platform that generates production-ready DevOps configurations and orchestrates workflows.
+AI-powered platform that generates production-ready DevOps configurations, orchestrates multi-bot workflows, and operates live infrastructure — all via natural language.
 
-**Current version: v1.0.0**
+**Current version: v2.0.0**
 
 ```bash
 brew tap the-ai-project-co/tap
@@ -19,8 +19,21 @@ After installation:
 
 ```bash
 astron --help
-astron init    # scaffold your first bot config
+astron init              # scaffold your first bot config
+astron run cicd          # generate GitHub Actions workflow
+astron run docker        # generate Dockerfile + compose
+astron run kubernetes    # generate K8s manifests + Helm chart
+astron run terraform     # generate Terraform IaC
+astron run security      # run security scan + SBOM
+astron run observability # generate Prometheus + Grafana configs
+astron run deployment    # generate blue-green/canary strategy
 ```
+
+**What's new in v2.0.0:**
+- Chat Engine — conversational DevOps interface (web UI + WebSocket)
+- Milestone 1: Typed tool annotations — the confirmation gate is now architectural
+- 8 bots wired to real workflow functions with live progress streaming
+- `clone_repo` tool, Edit button on confirmation cards, auto-migration
 
 ### Nimbus — DevOps Terminal Agent
 
